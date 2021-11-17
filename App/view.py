@@ -83,7 +83,8 @@ def optionThree(cont):
 
 
 def optionFour(cont, initialStation):
-    controller.minimumCostPaths(cont, initialStation)
+    rta = controller.minimumCostPaths(cont, initialStation)
+    print('El tiempo de ejecución es: ' + str(rta[1]))
 
 
 def optionFive(cont, destStation):
