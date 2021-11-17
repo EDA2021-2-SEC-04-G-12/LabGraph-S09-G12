@@ -200,8 +200,11 @@ def minimumCostPath(analyzer, destStation):
     y la estacion destino
     Se debe ejecutar primero la funcion minimumCostPaths
     """
+    start_time = time.process_time()
     path = djk.pathTo(analyzer['paths'], destStation)
-    return path
+    stop_time = time.process_time()
+    elapsed_time_mseg = (stop_time - start_time)*1000
+    return path, elapsed_time_mseg
 
 
 def totalStops(analyzer):

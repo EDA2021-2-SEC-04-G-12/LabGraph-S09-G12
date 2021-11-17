@@ -96,15 +96,15 @@ def optionFive(cont, destStation):
 
 def optionSix(cont, destStation):
     path = controller.minimumCostPath(cont, destStation)
-    if path is not None:
-        pathlen = stack.size(path)
+    if path[0] is not None:
+        pathlen = stack.size(path[0])
         print('El camino es de longitud: ' + str(pathlen))
-        while (not stack.isEmpty(path)):
-            stop = stack.pop(path)
+        while (not stack.isEmpty(path[0])):
+            stop = stack.pop(path[0])
             print(stop)
     else:
         print('No hay camino')
-
+    print('El tiempo de ejecución es: ' + str(path[1]))
 
 def optionSeven(cont):
     maxvert, maxdeg = controller.servedRoutes(cont)
